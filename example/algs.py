@@ -70,15 +70,22 @@ def insertionsort(x):
     Then add each subsequent element of x to its sorted place in the new array 
     by iterating through the sorted array until reaching the first element
     greater than the x element. Place the x element just before this element in the 
-    new array. Repeat for all elements of x.
+    new array. If an element greater than the x element is not found, place the x 
+    element at the end of the new array. Repeat for all elements of x.
     """
-    sorted = np.array(x[0])
+    print(x)
+    sorted = np.array([])
+    sorted = np.append(sorted,x[0])
     for item in x[1:]:
-        for j in range(0,sorted.size,1):
+        for j in range(0,len(sorted),1):
+            if sorted[j] > item:
+                sorted = np.insert(sorted,j-1,item)
+                break
+        sorted = np.insert(sorted,len(sorted),item)
     assert len(sorted) == len(x)
     assert set(sorted) == set(x)
     assert is_sorted(sorted)
-    return x
+    return sorted
         
         
         
