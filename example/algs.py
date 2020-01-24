@@ -75,15 +75,17 @@ def insertionsort(x):
     new array. If an element greater than the x element is not found, place the x 
     element at the end of the new array. Repeat for all elements of x.
     """
-    print(x)
     sorted = np.array([])
     sorted = np.append(sorted,x[0])
     for item in x[1:]:
+        item_placed = False
         for j in range(0,len(sorted),1):
             if sorted[j] > item:
-                sorted = np.insert(sorted,j-1,item)
+                sorted = np.insert(sorted,j,item)
+                item_placed = True
                 break
-        sorted = np.insert(sorted,len(sorted),item)
+        if not item_placed:
+            sorted = np.insert(sorted,len(sorted),item)
     assert len(sorted) == len(x)
     assert set(sorted) == set(x)
     assert is_sorted(sorted)

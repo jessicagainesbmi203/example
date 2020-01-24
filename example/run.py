@@ -10,9 +10,11 @@ def run_stuff():
     """
     print("This is `run()` from ", __file__)
 
-    x = np.random.rand(10)
+    #x = np.random.rand(10)
+    x = np.array(['b','c','a','d'])
     print("Unsorted input: ", x)
-
+    y = np.array(['b','c','a','d'])
+    z = np.array(['b','c','a','d'])
     print("Bubble sort output: ", bubblesort(x))
-    print("Quick sort output: ", quicksort(x))
-    print("Insertion sort output: ", insertionsort(x))
+    print("Quick sort output: ", quicksort(y))
+    print("Insertion sort output: ", insertionsort(z))
