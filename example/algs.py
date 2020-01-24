@@ -45,6 +45,8 @@ def quicksort(x):
     to a right partition. Recursively quicksort the left and right sub arrays. 
     Then concatenate the left partition, pivot, and right partition in that order.
     """
+    if x.size == 0:
+        return x
     pivot = list()
     pivot.append(x[0])
     left = list()
@@ -86,21 +88,3 @@ def insertionsort(x):
     assert set(sorted) == set(x)
     assert is_sorted(sorted)
     return sorted
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        

@@ -20,11 +20,56 @@ def test_bubblesort():
     # think about: (1) does your code handle 0-element arrays without
     # failing, (2) does your code handle characters?
 
+    # test odd length
     x = np.array([1,2,4,0,1])
-    assert np.array_equal(algs.bubblesort(x),np.array([0,1,1,2,4])
-
-def test_quicksort():
+    assert np.array_equal(algs.bubblesort(x),np.array([0,1,1,2,4]))
+    # test even length
+    x = np.array([1,2,4,0])
+    assert np.array_equal(algs.bubblesort(x), np.array([0,1,2,4]))
+    # test empty vector
+    x = np.array([])
+    assert np.array_equal(algs.bubblesort(x),np.array([]))
+    # test single element vector
+    x = np.array([7])
+    assert np.array_equal(algs.bubblesort(x),np.array([7]))
+    # test duplicated elements
+    x = np.array([1,1,1,1])
+    assert np.array_equal(algs.bubblesort(x),np.array([1,1,1,1]))
+    # test characters
+    x = np.array(['b','d','a','c'])
+    assert np.array_equal(algs.bubblesort(x),np.array(['a','b','c','d']))
+    
+def test_quicksort():    
+    # test odd length
     x = np.array([1,2,4,0,1])
-    # for now, just attempt to call the quicksort function, should
-    # actually check output
-    algs.quicksort(x)
+    assert np.array_equal(algs.quicksort(x),np.array([0,1,1,2,4]))
+    # test even length
+    x = np.array([1,2,4,0])
+    assert np.array_equal(algs.quicksort(x), np.array([0,1,2,4]))
+    # test empty vector
+    x = np.array([])
+    assert np.array_equal(algs.quicksort(x),np.array([]))
+    # test single element vector
+    x = np.array([7])
+    assert np.array_equal(algs.quicksort(x),np.array([7]))
+    # test duplicated elements
+    x = np.array([1,1,1,1])
+    assert np.array_equal(algs.quicksort(x),np.array([1,1,1,1]))
+    # test characters
+    x = np.array(['b','d','a','c'])
+    assert np.array_equal(algs.quicksort(x),np.array(['a','b','c','d']))
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
