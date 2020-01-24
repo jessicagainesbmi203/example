@@ -78,14 +78,3 @@ def test_insertionsort():
     # test characters
     x = np.array(['b','d','a','c'])
     assert np.array_equal(algs.insertionsort(x)['sorted'],np.array(['a','b','c','d']))    
-    
-def test_time_complexity():
-    #sizes_to_test = (100,200,300,400,500,600,700,800,900,1000)
-    sizes_to_test = (100)
-    for size in sizes_to_test:
-        
-    
-    
-    
-    
-    
