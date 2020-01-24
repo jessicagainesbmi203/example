@@ -20,7 +20,7 @@ def bubblesort(x):
     to the element ahead of it. If the first element is greater than the second,
     swap the elements. Repeat the iteration until no swaps occur in an iteration.`
     """
-    copy = x
+    copy = np.copy(x)
     sorted = False
     while not sorted:
         swap_this_round = False
@@ -47,11 +47,12 @@ def quicksort(x):
     """
     if x.size == 0:
         return x
+    copy = np.copy(x)
     pivot = list()
-    pivot.append(x[0])
+    pivot.append(copy[0])
     left = list()
     right = list()
-    for item in x[1:]:
+    for item in copy[1:]:
         if item > pivot[0]:
             right.append(item)
         if item < pivot[0]:
@@ -75,9 +76,10 @@ def insertionsort(x):
     new array. If an element greater than the x element is not found, place the x 
     element at the end of the new array. Repeat for all elements of x.
     """
+    copy = np.copy(x)
     sorted = np.array([])
-    sorted = np.append(sorted,x[0])
-    for item in x[1:]:
+    sorted = np.append(sorted,copy[0])
+    for item in copy[1:]:
         item_placed = False
         for j in range(0,len(sorted),1):
             if sorted[j] > item:
