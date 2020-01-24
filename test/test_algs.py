@@ -22,52 +22,68 @@ def test_bubblesort():
 
     # test odd length
     x = np.array([1,2,4,0,1])
-    assert np.array_equal(algs.bubblesort(x),np.array([0,1,1,2,4]))
+    assert np.array_equal(algs.bubblesort(x)['sorted'],np.array([0,1,1,2,4]))
     # test even length
     x = np.array([1,2,4,0])
-    assert np.array_equal(algs.bubblesort(x), np.array([0,1,2,4]))
+    assert np.array_equal(algs.bubblesort(x)['sorted'], np.array([0,1,2,4]))
     # test empty vector
     x = np.array([])
-    assert np.array_equal(algs.bubblesort(x),np.array([]))
+    assert np.array_equal(algs.bubblesort(x)['sorted'],np.array([]))
     # test single element vector
     x = np.array([7])
-    assert np.array_equal(algs.bubblesort(x),np.array([7]))
+    assert np.array_equal(algs.bubblesort(x)['sorted'],np.array([7]))
     # test duplicated elements
     x = np.array([1,1,1,1])
-    assert np.array_equal(algs.bubblesort(x),np.array([1,1,1,1]))
+    assert np.array_equal(algs.bubblesort(x)['sorted'],np.array([1,1,1,1]))
     # test characters
     x = np.array(['b','d','a','c'])
-    assert np.array_equal(algs.bubblesort(x),np.array(['a','b','c','d']))
+    assert np.array_equal(algs.bubblesort(x)['sorted'],np.array(['a','b','c','d']))
     
 def test_quicksort():    
     # test odd length
-    x = np.array([1,2,4,0,1])
-    assert np.array_equal(algs.quicksort(x),np.array([0,1,1,2,4]))
+    x = np.array([1,2,4,0,3])
+    assert np.array_equal(algs.quicksort(x)['sorted'],np.array([0,1,2,3,4]))
     # test even length
     x = np.array([1,2,4,0])
-    assert np.array_equal(algs.quicksort(x), np.array([0,1,2,4]))
+    assert np.array_equal(algs.quicksort(x)['sorted'], np.array([0,1,2,4]))
     # test empty vector
     x = np.array([])
-    assert np.array_equal(algs.quicksort(x),np.array([]))
+    assert np.array_equal(algs.quicksort(x)['sorted'],np.array([]))
     # test single element vector
     x = np.array([7])
-    assert np.array_equal(algs.quicksort(x),np.array([7]))
+    assert np.array_equal(algs.quicksort(x)['sorted'],np.array([7]))
     # test duplicated elements
     x = np.array([1,1,1,1])
-    assert np.array_equal(algs.quicksort(x),np.array([1,1,1,1]))
+    assert np.array_equal(algs.quicksort(x)['sorted'],np.array([1,1,1,1]))
     # test characters
     x = np.array(['b','d','a','c'])
-    assert np.array_equal(algs.quicksort(x),np.array(['a','b','c','d']))
+    assert np.array_equal(algs.quicksort(x)['sorted'],np.array(['a','b','c','d']))
     
+def test_insertionsort():    
+    # test odd length
+    x = np.array([1,2,4,0,3])
+    assert np.array_equal(algs.insertionsort(x)['sorted'],np.array([0,1,2,3,4]))
+    # test even length
+    x = np.array([1,2,4,0])
+    assert np.array_equal(algs.insertionsort(x)['sorted'], np.array([0,1,2,4]))
+    # test empty vector
+    x = np.array([])
+    assert np.array_equal(algs.insertionsort(x)['sorted'],np.array([]))
+    # test single element vector
+    x = np.array([7])
+    assert np.array_equal(algs.insertionsort(x)['sorted'],np.array([7]))
+    # test duplicated elements
+    x = np.array([1,1,1,1])
+    assert np.array_equal(algs.insertionsort(x)['sorted'],np.array([1,1,1,1]))
+    # test characters
+    x = np.array(['b','d','a','c'])
+    assert np.array_equal(algs.insertionsort(x)['sorted'],np.array(['a','b','c','d']))    
     
-    
-    
-    
-    
-    
-    
-    
-    
+def test_time_complexity():
+    #sizes_to_test = (100,200,300,400,500,600,700,800,900,1000)
+    sizes_to_test = (100)
+    for size in sizes_to_test:
+        
     
     
     
