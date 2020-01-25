@@ -105,6 +105,7 @@ def insertionsort(x):
         return {'sorted':x, 'c':0, 'a':0}
     copy = np.copy(x)
     sorted = np.array([])
+    assignments = assignments + 1
     sorted = np.append(sorted,copy[0])
     for item in copy[1:]:
         item_placed = False
