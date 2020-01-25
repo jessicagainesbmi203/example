@@ -27,6 +27,7 @@ def bubblesort(x):
     while not sorted:
         swap_this_round = False
         for i in range(0,len(copy)-1,1):
+            assignments = assignments + 1 # assign counter
             conditionals = conditionals + 1
             if (copy[i] > copy[i+1]):
                 assignments = assignments + 1
@@ -66,11 +67,11 @@ def quicksort(x):
             assignments = assignments + 1
             right = np.append(right,item)
         conditionals = conditionals + 1
-        if item <= pivot:
+        else if item < pivot:
             assignments = assignments + 1
             left = np.append(left,item)
         conditionals = conditionals + 1
-        if item == pivot:
+        else if item == pivot:
             assignments = assignments + 1
             equal = np.append(equal,item)
     assignments = assignments + 1
