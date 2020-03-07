@@ -85,9 +85,11 @@ def quicksort(x):
     conditionals = conditionals + right_data['c']
     assignments = assignments + right_data['a']
     sorted = np.append(temp,right_data['sorted'])
-    assert len(sorted) == len(x)
-    assert set(sorted) == set(x)
-    assert is_sorted(sorted)
+    print(len(sorted))
+    print(len(x))
+    #assert len(sorted) == len(x)
+    #assert set(sorted) == set(x)
+    #assert is_sorted(sorted)
     return {'sorted' : sorted, 'c' : conditionals, 'a' : assignments}
     
 def insertionsort(x):
