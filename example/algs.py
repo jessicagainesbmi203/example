@@ -67,11 +67,11 @@ def quicksort(x):
             assignments = assignments + 1
             right = np.append(right,item)
         conditionals = conditionals + 1
-        elif item < pivot:
+        if item < pivot:
             assignments = assignments + 1
             left = np.append(left,item)
         conditionals = conditionals + 1
-        elif item == pivot:
+        if item == pivot:
             assignments = assignments + 1
             equal = np.append(equal,item)
     assignments = assignments + 1
